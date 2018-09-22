@@ -4,43 +4,107 @@ exports.seed = function (knex, Promise) {
         .then(function () {
             // Inserts seed entries
             return knex('closet').insert([
-                {
-                    type: "top",
-                    img: "#000",
-                    season: "spring/summer",
-                    color: "orange"
-                },
-                {
-                    type: "skirt",
-                    img: "#000",
-                    season: "srping/summer",
-                    color: "navy"
-                },
-                {
-                    type: "dress",
-                    img: "#000",
-                    season: "srping/summer",
-                    color: "black"
-                },
-                {
-                    type: "bag",
-                    img: "#000",
-                    season: "srping/summer",
-                    color: "red"
-                },
-                {
-                    type: "shoes",
-                    img: "#000",
-                    season: "srping/summer",
-                    color: "kaki"
-                },
-                {
-                    type: "hat",
-                    img: "#000",
-                    season: "srping/summer",
-                    color: "mustard"
-                }
-            ]
-            );
+                "spring" = [
+                    "tops" = [
+                        {
+                            img: "#000",
+                            color: "orange"
+                        },
+                        {
+                            img: "#111",
+                            color: "green"
+                        },
+                        {
+                            img: "#333",
+                            color: "coral"
+                        }
+                    ],
+                    "bottoms" = [
+                        {
+                            img: "a.jpg",
+                            color: "orange"
+                        },
+                        {
+                            img: "b.jpg",
+                            color: "orange"
+                        }
+                    ]],
+                "summer" = [
+                    "dress" = [
+                        {
+                            img: "o.png",
+                            color: "orange"
+                        },
+                        {
+                            img: "abc.jpg",
+                            color: "green"
+                        },
+                        {
+                            img: "",
+                            color: "coral"
+                        }
+                    ],
+                    "shoes" = [
+                        {
+                            img: "a.jpg",
+                            color: "black"
+                        },
+                        {
+                            img: "b.jpg",
+                            color: "red"
+                        }
+                    ]],
+                "autumn" = [
+                    "accessories" = [
+                        {
+                            img: "pok.png",
+                            color: "orange"
+                        },
+                        {
+                            img: "treee.jpg",
+                            color: "green"
+                        },
+                        {
+                            img: "000",
+                            color: "coral"
+                        }
+                    ],
+                    "shoes" = [
+                        {
+                            img: "fern.jpg",
+                            color: "black"
+                        },
+                        {
+                            img: "bob.jpg",
+                            color: "red"
+                        }
+                    ]],
+                "winter" = [
+                    "tops" = [
+                        {
+                            img: "green.png",
+                            color: "green"
+                        },
+                        {
+                            img: "cat.jpg",
+                            color: "green"
+                        },
+                        {
+                            img: "hhh.jpg",
+                            color: "coral"
+                        }
+                    ],
+                    "jackets" = [
+                        {
+                            img: "img.jpg",
+                            color: "black"
+                        },
+                        {
+                            img: "png.jpg",
+                            color: "red"
+                        }
+                    ]
+                ]
+            ])
         });
 };

@@ -5,10 +5,41 @@
   "repository": "https://github.com/marie-phu-qui/mypersonalcloset.git",
   "author": "marie-phu-qui <marie.nguyen.phu.qui@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "postinstall": "webpack",
+    "dev": "nodemon server & webpack --watch ",
+    "start": "node server/index",
+    "watch": "nodemon -e js,jsx -x npm test",
+    "h:deploy": "git push heroku master",
+    "h:migrate": "heroku run knex migrate:latest",
+    "h:rollback": "heroku run knex migrate:rollback",
+    "h:seed": "heroku run knex seed:run",
+    "knex": "knex"
+  },
+  "babel": {
+    "presets": [
+      "react"
+    ]
+  },
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "express": "^4.16.3",
     "knex": "^0.15.2",
     "nodemon": "^1.18.4",
-    "sqlite3": "^4.0.2"
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "superagent": "^4.0.0-beta.5",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.0.2",
+    "supertest": "^3.3.0"
   }
 }

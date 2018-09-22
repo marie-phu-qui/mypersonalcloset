@@ -30,6 +30,7 @@ An app using authentification to display a personal user database of clothing it
  ---
 
 ## Back end tasks
+---- DATA STRUCTURE ----
 * 1 DB Table  
 * 2 DB Table 
 * 3 Make seed 

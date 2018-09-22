@@ -4,8 +4,8 @@ exports.seed = function (knex, Promise) {
         .then(function () {
             // Inserts seed entries
             return knex('closet').insert([
-                "spring" = [
-                    "tops" = [
+                spring = [
+                    tops = [
                         {
                             img: "#000",
                             color: "orange"
@@ -19,7 +19,7 @@ exports.seed = function (knex, Promise) {
                             color: "coral"
                         }
                     ],
-                    "bottoms" = [
+                    bottoms = [
                         {
                             img: "a.jpg",
                             color: "orange"
@@ -29,8 +29,8 @@ exports.seed = function (knex, Promise) {
                             color: "orange"
                         }
                     ]],
-                "summer" = [
-                    "dress" = [
+                summer = [
+                    dresses = [
                         {
                             img: "o.png",
                             color: "orange"
@@ -44,7 +44,7 @@ exports.seed = function (knex, Promise) {
                             color: "coral"
                         }
                     ],
-                    "shoes" = [
+                    shoes = [
                         {
                             img: "a.jpg",
                             color: "black"
@@ -54,8 +54,8 @@ exports.seed = function (knex, Promise) {
                             color: "red"
                         }
                     ]],
-                "autumn" = [
-                    "accessories" = [
+                autumn = [
+                    accessories = [
                         {
                             img: "pok.png",
                             color: "orange"
@@ -69,7 +69,7 @@ exports.seed = function (knex, Promise) {
                             color: "coral"
                         }
                     ],
-                    "shoes" = [
+                    shoes = [
                         {
                             img: "fern.jpg",
                             color: "black"
@@ -79,8 +79,8 @@ exports.seed = function (knex, Promise) {
                             color: "red"
                         }
                     ]],
-                "winter" = [
-                    "tops" = [
+                winter = [
+                    tops = [
                         {
                             img: "green.png",
                             color: "green"
@@ -94,7 +94,7 @@ exports.seed = function (knex, Promise) {
                             color: "coral"
                         }
                     ],
-                    "jackets" = [
+                    jackets = [
                         {
                             img: "img.jpg",
                             color: "black"

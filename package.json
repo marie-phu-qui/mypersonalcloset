@@ -1,0 +1,19 @@
+{
+  "name": "mypersonalcloset",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/marie-phu-qui/mypersonalcloset.git",
+  "author": "marie-phu-qui <marie.nguyen.phu.qui@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jest": "^23.6.0",
+    "knex": "^0.15.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "redux-thunk": "^2.3.0",
+    "sqlite3": "^4.0.2",
+    "webpack": "^4.20.2"
+  }
+}

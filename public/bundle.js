@@ -97,7 +97,7 @@
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -112,8 +112,6 @@ var _Header2 = _interopRequireDefault(_Header);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -121,108 +119,26 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var App = function (_React$Component) {
-    _inherits(App, _React$Component);
+  _inherits(App, _React$Component);
 
-    function App(props) {
-        _classCallCheck(this, App);
+  function App(props) {
+    _classCallCheck(this, App);
 
-        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { "class": "container" },
+        _react2.default.createElement(_Header2.default, null)
+      );
     }
+  }]);
 
-    _createClass(App, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { "class": "container" },
-                _react2.default.createElement(_Header2.default, null),
-                _react2.default.createElement(
-                    "div",
-                    { "class": "content" },
-                    _react2.default.createElement(
-                        "div",
-                        _defineProperty({ "class": "closet" }, "class", "col-lg-12"),
-                        _react2.default.createElement(
-                            "div",
-                            { id: "my-items" },
-                            _react2.default.createElement(
-                                "h2",
-                                { "class": "col-lg-12" },
-                                "Your items"
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { "class": "row" },
-                                _react2.default.createElement("div", { id: "arrow-left", "class": "nav-arrow col-sm-1" }),
-                                _react2.default.createElement(
-                                    "div",
-                                    { "class": "col-md-2" },
-                                    _react2.default.createElement(
-                                        "img",
-                                        null,
-                                        "img 1"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { "class": "col-md-3" },
-                                    _react2.default.createElement(
-                                        "img",
-                                        null,
-                                        "img 2"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { "class": "col-md-3" },
-                                    _react2.default.createElement(
-                                        "img",
-                                        null,
-                                        "img 3"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { "class": "col-md-2" },
-                                    _react2.default.createElement(
-                                        "img",
-                                        null,
-                                        "img 4"
-                                    )
-                                ),
-                                _react2.default.createElement("div", { id: "arrow-right", "class": "nav-arrow col-sm-1" })
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { id: "add-new-item" },
-                            _react2.default.createElement(
-                                "h2",
-                                { "class": "col-lg-12" },
-                                "Add one item"
-                            ),
-                            _react2.default.createElement(
-                                "form",
-                                { id: "upload-form", "class": "row" },
-                                _react2.default.createElement(
-                                    "div",
-                                    { "class": "col-lg-9" },
-                                    _react2.default.createElement("input", { type: "image", id: "new-item", "class": "col-sm-12", placeholder: "Upload one item", onclick: addItem() })
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { "class": "button col-sm-3" },
-                                    _react2.default.createElement("input", { type: "button", value: "ADD", "class": "col-sm-12", id: "upload-btn", onclick: uploadItem() })
-                                )
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return App;
+  return App;
 }(_react2.default.Component);
 
 exports.default = App;
@@ -337,7 +253,7 @@ function loading() {
   switch (action.type) {
     case "REQUEST_DATA":
       return true;
-    case "RECEIVE_METEO":
+    case "RECEIVE_DATA":
       return false;
     case "SHOW_ERROR":
       return false;

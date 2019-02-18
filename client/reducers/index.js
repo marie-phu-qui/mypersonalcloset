@@ -5,7 +5,7 @@ function loading(state = LOADING, action) {
   switch (action.type) {
     case "REQUEST_DATA":
       return true
-    case "RECEIVE_METEO":
+    case "RECEIVE_DATA":
       return false
     case "SHOW_ERROR":
       return false

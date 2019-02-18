@@ -258,6 +258,11 @@ var Header = function Header() {
             null,
             "My personal closet"
         ),
+        _react2.default.createElement(
+            "p",
+            null,
+            "lalalalalla"
+        ),
         _react2.default.createElement("hr", { align: "center", width: "70%" })
     );
 };
@@ -337,7 +342,7 @@ function loading() {
   switch (action.type) {
     case "REQUEST_DATA":
       return true;
-    case "RECEIVE_METEO":
+    case "RECEIVE_DATA":
       return false;
     case "SHOW_ERROR":
       return false;

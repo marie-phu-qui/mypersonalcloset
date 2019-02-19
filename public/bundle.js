@@ -110,6 +110,10 @@ var _Header = __webpack_require__(/*! ./Header */ "./client/components/Header.js
 
 var _Header2 = _interopRequireDefault(_Header);
 
+var _ItemsList = __webpack_require__(/*! ./ItemsList */ "./client/components/ItemsList.jsx");
+
+var _ItemsList2 = _interopRequireDefault(_ItemsList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -128,12 +132,13 @@ var App = function (_React$Component) {
   }
 
   _createClass(App, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { "class": "container" },
-        _react2.default.createElement(_Header2.default, null)
+        'div',
+        { className: 'container' },
+        _react2.default.createElement(_Header2.default, null),
+        _react2.default.createElement(_ItemsList2.default, null)
       );
     }
   }]);
@@ -168,17 +173,53 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Header = function Header() {
     return _react2.default.createElement(
         "div",
-        { id: "main-title", "class": "col-lg-12" },
+        { id: "main-title", align: "center", className: "col-lg-12" },
         _react2.default.createElement(
             "h1",
             null,
             "My personal closet"
         ),
-        _react2.default.createElement("hr", { align: "center", width: "70%" })
+        _react2.default.createElement("hr", { width: "70%" })
     );
 };
 
 exports.default = Header;
+
+/***/ }),
+
+/***/ "./client/components/ItemsList.jsx":
+/*!*****************************************!*\
+  !*** ./client/components/ItemsList.jsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ItemsList = function ItemsList() {
+    return _react2.default.createElement(
+        "div",
+        { id: "main-title", className: "col-lg-12" },
+        _react2.default.createElement(
+            "h2",
+            null,
+            "My clothes"
+        )
+    );
+};
+
+exports.default = ItemsList;
 
 /***/ }),
 

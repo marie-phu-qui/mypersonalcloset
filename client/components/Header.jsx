@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Header = () => (
-    <div id="main-title" className="col-lg-12">
+    <div id="main-title" align="center" className="col-lg-12">
         <h1>My personal closet</h1>
-        <hr align="center" width="70%"/>
+        <hr width="70%"/>
     </div>
 )
 

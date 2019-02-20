@@ -23,10 +23,10 @@ export const receiveData = (data) => {
 }
 
 // Fetching from API
-export function fetchMeteo() {
-console.log('hello 0')
+export function fetchClothes() {
+console.log('hello clothing')
   return (dispatch) => {
-    console.log('hello 1')
+    console.log('hello clothing dispatch')
     dispatch(requestDATA())
     return request
       .get('/')

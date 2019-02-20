@@ -110,6 +110,14 @@ var _Header = __webpack_require__(/*! ./Header */ "./client/components/Header.js
 
 var _Header2 = _interopRequireDefault(_Header);
 
+var _SeasonList = __webpack_require__(/*! ./SeasonList */ "./client/components/SeasonList.jsx");
+
+var _SeasonList2 = _interopRequireDefault(_SeasonList);
+
+var _ItemsList = __webpack_require__(/*! ./ItemsList */ "./client/components/ItemsList.jsx");
+
+var _ItemsList2 = _interopRequireDefault(_ItemsList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -128,12 +136,14 @@ var App = function (_React$Component) {
   }
 
   _createClass(App, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { "class": "container" },
-        _react2.default.createElement(_Header2.default, null)
+        'div',
+        { className: 'container' },
+        _react2.default.createElement(_Header2.default, null),
+        _react2.default.createElement(_SeasonList2.default, null),
+        _react2.default.createElement(_ItemsList2.default, null)
       );
     }
   }]);
@@ -168,17 +178,270 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Header = function Header() {
     return _react2.default.createElement(
         "div",
-        { id: "main-title", "class": "col-lg-12" },
+        { id: "main-title", align: "center", className: "col-lg-12" },
         _react2.default.createElement(
             "h1",
             null,
             "My personal closet"
         ),
-        _react2.default.createElement("hr", { align: "center", width: "70%" })
+        _react2.default.createElement("hr", { width: "70%" })
     );
 };
 
 exports.default = Header;
+
+/***/ }),
+
+/***/ "./client/components/Item.jsx":
+/*!************************************!*\
+  !*** ./client/components/Item.jsx ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Item = function Item(props) {
+    return _react2.default.createElement(
+        "div",
+        { id: "main-title", align: "center", className: "col-lg-12" },
+        _react2.default.createElement(
+            "h1",
+            null,
+            "lalala"
+        ),
+        console.log('hekllo'),
+        console.log(props),
+        _react2.default.createElement("hr", { width: "70%" })
+    );
+};
+
+exports.default = Item;
+
+/***/ }),
+
+/***/ "./client/components/ItemsList.jsx":
+/*!*****************************************!*\
+  !*** ./client/components/ItemsList.jsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ItemsList = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Item = __webpack_require__(/*! ./Item */ "./client/components/Item.jsx");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// should be a using props as it is a read only props to to passed on to
+// should be state if the component itself is dynamic - should this be the dynamic items display ?
+
+var ItemsList = exports.ItemsList = function (_React$Component) {
+    _inherits(ItemsList, _React$Component);
+
+    function ItemsList(props) {
+        _classCallCheck(this, ItemsList);
+
+        var _this = _possibleConstructorReturn(this, (ItemsList.__proto__ || Object.getPrototypeOf(ItemsList)).call(this, props));
+
+        _this.state = {};
+        _this.handleClick = _this.handleClick.bind(_this);
+        return _this;
+    }
+
+    _createClass(ItemsList, [{
+        key: 'handleClick',
+        value: function handleClick(e) {
+            e.preventDefault();
+            this.setState({
+                itemType: e.target.innerText
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { id: 'main-title', className: 'col-lg-12' },
+                _react2.default.createElement(
+                    'h2',
+                    null,
+                    'My clothes'
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'list-items' },
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '#', onClick: function onClick(e) {
+                                    return _this2.handleClick(e);
+                                } },
+                            _react2.default.createElement(
+                                'h4',
+                                null,
+                                'Dresses'
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '#', onClick: function onClick(e) {
+                                    return _this2.handleClick(e);
+                                } },
+                            _react2.default.createElement(
+                                'h4',
+                                null,
+                                'Pants'
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '#', onClick: function onClick(e) {
+                                    return _this2.handleClick(e);
+                                } },
+                            _react2.default.createElement(
+                                'h4',
+                                null,
+                                'Tops'
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '#', onClick: function onClick(e) {
+                                    return _this2.handleClick(e);
+                                } },
+                            _react2.default.createElement(
+                                'h4',
+                                null,
+                                'Else'
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return ItemsList;
+}(_react2.default.Component);
+
+exports.default = ItemsList;
+
+/***/ }),
+
+/***/ "./client/components/SeasonList.jsx":
+/*!******************************************!*\
+  !*** ./client/components/SeasonList.jsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SeasonList = function (_React$Component) {
+  _inherits(SeasonList, _React$Component);
+
+  function SeasonList(props) {
+    _classCallCheck(this, SeasonList);
+
+    var _this = _possibleConstructorReturn(this, (SeasonList.__proto__ || Object.getPrototypeOf(SeasonList)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(SeasonList, [{
+    key: 'render',
+    value: function render() {
+      var seasons = ['spring', 'summer', 'autumn', 'winter'];
+      var listSeasons = seasons.map(function (season) {
+        return _react2.default.createElement(
+          'li',
+          null,
+          season
+        );
+      });
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'ul',
+          null,
+          listSeasons
+        )
+      );
+    }
+  }]);
+
+  return SeasonList;
+}(_react2.default.Component);
+
+exports.default = SeasonList;
 
 /***/ }),
 

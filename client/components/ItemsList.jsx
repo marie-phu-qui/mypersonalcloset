@@ -34,7 +34,7 @@ export class ItemsList extends React.Component {
                 <a href="#" onClick={(e) => this.handleClick(e)}><h4>Tops</h4></a>
             </li>
             <li>
-                <a href="#" onClick={(e) => this.handleClick(e)}><h4>Else</h4></a>
+                <a href="#" onClick={(e) => this.handleClick(e)}><h4>See all</h4></a>
             </li>
         </ul>
     </div>

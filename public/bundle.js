@@ -358,7 +358,7 @@ var ItemsList = exports.ItemsList = function (_React$Component) {
                             _react2.default.createElement(
                                 'h4',
                                 null,
-                                'Else'
+                                'See all'
                             )
                         )
                     )
@@ -411,17 +411,26 @@ var SeasonList = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (SeasonList.__proto__ || Object.getPrototypeOf(SeasonList)).call(this, props));
 
     _this.state = {};
+    _this.handleClick = _this.handleClick.bind(_this);
     return _this;
   }
 
   _createClass(SeasonList, [{
+    key: 'handleClick',
+    value: function handleClick(e) {
+      e.preventDefault();
+      console.log(this.props.season);
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var seasons = ['spring', 'summer', 'autumn', 'winter'];
-      var listSeasons = seasons.map(function (season) {
+      var listSeasons = seasons.map(function (season, i) {
         return _react2.default.createElement(
           'li',
-          null,
+          { key: i, season: season },
           season
         );
       });
@@ -430,9 +439,15 @@ var SeasonList = function (_React$Component) {
         'div',
         null,
         _react2.default.createElement(
-          'ul',
-          null,
-          listSeasons
+          'a',
+          { href: '#', onClick: function onClick(e) {
+              return _this2.handleClick(e);
+            } },
+          _react2.default.createElement(
+            'ul',
+            null,
+            listSeasons
+          )
         )
       );
     }
